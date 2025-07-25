@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nostra</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="scroll-smooth font-[Poppins]">
+
+    <div class="flex justify-between p-3 sticky top-0 z-50 bg-white">
+        <h1 class="text-2xl font-bold">Nostra</h1>
+        <i class="fa-solid fa-bars md:hidden" id="menu" style="color: #000000;"></i>
+
+        <ul class="flex gap-5 hidden md:flex">
+            <li>
+                <a class="hover:underline" href="./home.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#newarrivals">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#most-wanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./collection.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sidenav bar -->
+    <section id="sidenav"
+        class="bg-slate-800 fixed left-0 md:hidden h-screen w-1/3 z-50 top-0  transition-all duration-1000 text-white text-l font-bold">
+        <div id="close-sidebar" class="text-xl text-right mr-2">
+            <p class="cursor-pointer hover:bg-red-600 inline p-2">X</p>
+        </div>
+        <ul class="flex flex-col gap-5 md:hidden p-2">
+            <li>
+                <a class="hover:underline" href="/">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#newarrivals">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#most-wanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./collection.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="/contact.html">Contact</a>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- Filters & Product Section -->
+    <section class="flex flex-col md:flex-row">
+        <!-- Sidebar Filters -->
+        <aside class="w-full md:w-1/4 p-6">
+            <h2 class="text-2xl font-bold mb-4">Filters</h2>
+
+            <!-- Occasion -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">Occasion</h3>
+                <label><input type="checkbox" value="summer" class="mr-2">Summer</label><br>
+                <label><input type="checkbox" value="party" class="mr-2">Party</label><br>
+                <label><input type="checkbox" value="beach" class="mr-2">Beach</label>
+            </div>
+
+            <!-- Color -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">Color</h3>
+                <label><input type="checkbox" value="red" class="mr-2">Red</label><br>
+                <label><input type="checkbox" value="blue" class="mr-2">Blue</label><br>
+                <label><input type="checkbox" value="green" class="mr-2">Green</label><br>
+                <label><input type="checkbox" value="white" class="mr-2">White</label><br>
+                <label><input type="checkbox" value="black" class="mr-2">Black</label>
+            </div>
+
+            <!-- Arrival -->
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Arrival</h3>
+                <label><input type="checkbox" value="new" class="mr-2">New</label><br>
+                <label><input type="checkbox" value="old" class="mr-2">Old</label>
+            </div>
+        </aside>
+
+        <!-- Products -->
+        <main class="w-full md:w-3/4 p-6">
+            <input type="text" id="sarch" placeholder="Search products..." class="w-full p-2 mb-6 border rounded" />
+
+            <div id="container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="product" data-occasion="summer" data-color="red" data-arrival="new">
+                    <img class="w-56 h-64" src="./assests/summer1.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Sunset Bloom</h1>
+                    <p class="font-bold">Rs 200</p>
+                </div>
+                <div class="product" data-occasion="party" data-color="green" data-arrival="new">
+                    <img class="w-56 h-64" src="./assests/party2.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Neon Vibes</h1>
+                    <p class="font-bold">Rs 400</p>
+                </div>
+                <div class="product" data-occasion="party" data-color="red" data-arrival="old">
+                    <img class="w-56 h-64" src="./assests/party1.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Crimson Flame</h1>
+                    <p class="font-bold">Rs 500</p>
+                </div>
+                <div class="product" data-occasion="summer" data-color="blue" data-arrival="new">
+                    <img class="w-56 h-64" src="./assests/summer2.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Ocean Drift</h1>
+                    <p class="font-bold">Rs 600</p>
+                </div>
+                <div class="product" data-occasion="beach" data-color="white" data-arrival="old">
+                    <img class="w-56 h-64" src="./assests/beach1.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Coastal Mist</h1>
+                    <p class="font-bold">Rs 600</p>
+                </div>
+                <div class="product" data-occasion="party" data-color="black" data-arrival="new">
+                    <img class="w-56 h-64" src="./assests/party3.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Night Star</h1>
+                    <p class="font-bold">Rs 400</p>
+                </div>
+                <div class="product" data-occasion="beach" data-color="black" data-arrival="new">
+                    <img class="w-56 h-64" src="./assests/beach2.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Moonshore</h1>
+                    <p class="font-bold">Rs 600</p>
+                </div>
+                <div class="product" data-occasion="party" data-color="red" data-arrival="new">
+                    <img class="w-56 h-64" src="./assests/party4.jpeg" />
+                    <h1 class="text-sm md:text-2xl font-bold">Scarlet Storm</h1>
+                    <p class="font-bold">Rs 700</p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white p-6 mt-10">
+        <h1 class="text-3xl font-bold">Nostra</h1>
+        <p class="mt-2 text-sm">Discover timeless fashion, bold choices, and effortless style.</p>
+        <div class="flex gap-4 mt-4">
+            <i class="fab fa-instagram hover:scale-110"></i>
+            <i class="fab fa-facebook hover:scale-110"></i>
+            <i class="fab fa-twitter hover:scale-110"></i>
+            <i class="fab fa-youtube hover:scale-110"></i>
+        </div>
+        <p class="text-xs mt-4">&copy; 2025 Nostra. All rights reserved.</p>
+    </footer>
+
+
+
+</body>
+<script src="./collection.js"></script>
+
+</html>

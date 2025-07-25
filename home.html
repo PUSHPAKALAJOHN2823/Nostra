@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="scroll-smooth">
+    <!-- popup section -->
+    <div class="bg-slate-800 flex justify-center gap-10 p-2 text-white text-l" id="popup">
+        <h2>Sign up and Get 25% offer!!</h2>
+        <p id="close" class="cursor-pointer">X</p>
+    </div>
+
+    <!-- Navbar Section -->
+    <div class="flex justify-between p-3 sticky top-0 z-50 bg-white">
+        <h1 class="text-2xl font-bold">Nostra</h1>
+        <i class="fa-solid fa-bars md:hidden" id="menu" style="color: #000000;"></i>
+
+        <ul class="flex gap-5 hidden md:flex">
+            <li>
+                <a class="hover:underline" href="./home.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#newarrivals">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#most-wanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./collection.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sidenav bar -->
+    <section id="sidenav"
+        class="bg-slate-800 fixed left-0 md:hidden h-screen w-1/3 z-50 top-0  transition-all duration-1000 text-white text-l font-bold">
+        <div id="close-sidebar" class="text-xl text-right mr-2">
+            <p class="cursor-pointer hover:bg-red-600 inline p-2">X</p>
+        </div>
+        <ul class="flex flex-col gap-5 md:hidden p-2">
+            <li>
+                <a class="hover:underline" href="./home.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#newarrivals">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#most-wanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./collection.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="/contact.html">Contact</a>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- Header Section -->
+    <div id="header" class=" relative m-1">
+        <div id="slidebtns" class="flex justify-between items-center absolute w-full h-fit z-10 top-1/4">
+            <i id="prev" class="fa-solid fa-chevron-left text-4xl md:text-8xl m-2 cursor-pointer"
+                style="color: #ffffff;"></i>
+            <div class="text-center m-2">
+                <h1 class="text-3xl text-white md:text-7xl font-bold mb-6">Level up your style with our</h1>
+                <p class="text-2xl text-white mb-5">Summer Collections</p>
+                <button class="bg-white text-xl p-2">Shop Now -></button>
+            </div>
+            <i id="next" class="fa-solid fa-chevron-right text-4xl md:text-8xl m-2 cursor-pointer"
+                style="color: #ffffff;"></i>
+        </div>
+        <div id="imgsec" class="h-[300px] sm:h-[500px] brightness-50 overflow-hidden">
+            <div id="slider" class="flex transition-transform duration-1000">
+                <img src="./assests/img1.jpg" class="min-w-full h-full object-cover">
+                <img src="./assests/img2.jpg" class="min-w-full h-full object-cover ">
+                <img src="./assests/img3.jpg" class="min-w-full h-full object-cover">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- brands border border-black h-1/4 border border-black h-1/4 Section -->
+    <h2 class="text-4xl font-bold m-2 mb-3 mt-5">Brands</h2>
+    <div class="flex justify-around gap-5 m-3">
+
+        <div class="brands">
+            <img class="w-20 h-20" src="./assests/brand1.png">
+            <p class="text-center text-xs font-bold">Raymond</p>
+        </div>
+        <div class="brand">
+            <img class="w-20 h-20" src="./assests/brand2.png">
+            <p class="text-center text-xs font-bold">Louis Philippe</p>
+        </div>
+        <div class="brands shadow-2xl">
+            <img class="w-20 h-20" src="./assests/brand3.jpeg">
+            <p class="text-center text-xs font-bold ">Van Heusen</p>
+        </div>
+        <div class="brands">
+            <img class="w-20 h-20" src="./assests/brand4.png">
+            <p class="text-center text-xs font-bold">Blackberrys</p>
+        </div>
+        <div class="brands">
+            <img class="w-20 h-20" src="./assests/brand5.png">
+            <p class="text-center text-xs font-bold">Peter England</p>
+        </div>
+        <div class="brands">
+            <img class="w-20 h-20" src="./assests/brand6.jpg">
+            <p class="text-center text-xs font-bold">Levi's</p>
+        </div>
+    </div>
+
+    <!-- Customer Experiences -->
+    <section class="m-2 mt-10">
+        <div class="max-w-6xl  mb-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">We Provide Best Customer Experiences</h2>
+            <p class="text-lg text-gray-600">We ensure that our customers have the best shopping experience</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+            <!-- Card 1 -->
+            <div class="bg-green-100 rounded-xl shadow-md p-6 hover:scale-105 transition-transform duration-300 ">
+                <div class="text-3xl mb-3 text-blue-500">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Original Products</h3>
+                <p class="text-gray-600 text-sm">Only top-quality, verified and original items — no fakes, ever.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-green-100 rounded-xl shadow-md p-6 hover:scale-105 transition-transform duration-300">
+                <div class="text-3xl mb-3 text-green-500">
+                    -500">
+        
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Satisfaction Guarantee</h3>
+                <p class="text-gray-600 text-sm">Love it or return it — easy returns and full refunds.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-green-100 rounded-xl shadow-md p-6 hover:scale-105 transition-transform duration-300">
+                <div class="text-3xl mb-3 text-yellow-500">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">New Arrivals Everyday</h3>
+                <p class="text-gray-600 text-sm">Stay updated with trending fashion — fresh drops daily.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-green-100 rounded-xl shadow-md p-6 hover:scale-105 transition-transform duration-300">
+                <div class="text-3xl mb-3 text-red-500">
+                     <i class="fas fa-truck-fast"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Fast & Free Shipping</h3>
+                <p class="text-gray-600 text-sm">No shipping charges on most items — fast delivery guaranteed!</p>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- New Arrivals -->
+    <section id="newarrivals" class="m-2 mt-5 ">
+        <h1 class="text-4xl font-bold mt-5 mb-5">New Arrivals</h1>
+        <div class="flex justify-around">
+            <div class="relative hover:shadow-xl transform hover:translate-y-2">
+                <img class="inline w-56 h-64 object-cover brightness-50" src="./assests/shirt.jpg">
+                <p class="bg-white p-2 absolute cursor-pointer left-1/4 bottom-1/4 rounded-xl">Shop Now -></p>
+            </div>
+            <div class="relative hover:shadow-xl transform hover:translate-y-2">
+                <img class="inline w-56 h-64 object-cover brightness-50" src="./assests/shirts.jpg">
+                <button class="bg-white p-2 absolute cursor-pointer left-1/4 bottom-1/4 rounded-xl">Shop Now -></button>
+            </div>
+            <div class="relative hover:shadow-xl transform hover:translate-y-2">
+                <img class="inline w-56 h-64 object-cover brightness-50" src="./assests/shirt3.jpg">
+                <button class="bg-white p-2 absolute cursor-pointer left-1/4 bottom-1/4 rounded-xl">Shop Now -></button>
+            </div>
+            <div class="relative hover:shadow-xl transform hover:translate-y-2">
+                <img class="inline w-56 h-64 object-cover brightness-50"  src="./assests/shirt4.jpg">
+                <button class="bg-white p-2 absolute cursor-pointer left-1/4 bottom-1/4 rounded-xl">Shop Now -></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Wanted -->
+     <section id="most-wanted" class="mt-5 m-2">
+        <h1 class="text-4xl font-bold mt-2 mb-5">Most Wanted</h1>
+        <div class="flex gap-5 overflow-x-auto scroll-smooth no-scrollbar" style="scrollbar-width: none;">
+            
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men1.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men2.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men3.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men4.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men5.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men6.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men7.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men8.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+            <div class="relative shrink-0">
+                <img class="w-56 h-64" src="./assests/men9.jpeg" />
+                <p class="bg-red-600 text-white text-2xl rounded px-1  absolute top-0">Sale</p>
+                <i class="fa-regular fa-heart p-2 bg-gray-50 absolute right-0 bottom-1" style="color: #000000;"></i>
+            </div>
+        </div>
+     </section>
+
+     </section>
+<!--offer image-->
+<section class=" container mt-5 m-2 ml-8">
+    <div class=" flex bg-slate-800 p-2 w-fit sm:flex flex-wrap md:flex-nowrap md:w-full">
+        <img src="./assests/offer.jpeg" class="w-full md:w-1/2">
+       
+        <div class="w-full md:1/2 p-6 flex flex-col justify-center items-start md:gap-3">
+        <h1 class="text-5xl text-white mb-5">Early Bird Offer</h1>
+        <p class="text-3xl text-white mb-5">35% OFF — Only for the First 30 Shoppers!</p>
+        <button class="text-xl text-black bg-white  border rounded w-36">Shop Now</button>
+       </div>
+    </div> 
+</section>
+<!--news letter-->
+<section style="text-align: center;" class="mt-20">
+    <h1 class=" text-2xl md:text-5xl font-bold p-3">Join our News Letter</h1>
+    <p class=" text-lg md:text-3xl p-3">Subscribe and unlock special deals, product news, and early access/p>
+    <input class=" border border-slate-800 w-3/4 mt-3"   type="text"><br>
+    <button class=" bg-slate-800 rounded-md text-white p-2 border mt-3 text-sm md:lg">Subscribe</button>
+
+</section>
+<!--footer-->
+<section class="mt-10">
+   <div class="bg-slate-900 p-5">
+  <h1 class="text-xl text-white md:text-5xl font-bold mt-4">Nostra</h1>
+  <p class="text-lg text-white md:text-2xl font-medium mt-4 max-w-full">
+    Discover timeless fashion, bold choices, and effortless style. At Nostra, we bring you the future of streetwear and classic blends.
+  </p>
+  <div class="flex items-center gap-6 mt-6">
+    <a href="#"><i class="fa-brands fa-instagram w-10 hover:scale-110 transition" style="color: #ffffff;"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook w-10 hover:scale-110 transition" style="color: #ffffff;"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter w-10 hover:scale-110 transition" style="color: #ffffff;"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube w-10 hover:scale-110 transition" style="color: #ffffff;"></i></a>
+  </div>
+  <p class="text-white text-sm md:text-xl font-light mt-6 mb-2">
+    &copy; 2025 Nostra. All rights reserved.
+  </p>
+</div>
+
+</section>
+
+
+</body>
+<script src="./home.js"></script>
+
+</html>
